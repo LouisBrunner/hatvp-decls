@@ -1,0 +1,9 @@
+# Python
+__pycache__
+env
+
+# Input
+liste.csv
+
+# Output
+rapport.*
