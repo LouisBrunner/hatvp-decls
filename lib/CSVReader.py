@@ -23,10 +23,10 @@ class CSVReader:
 
     def _fetch(self):
         r = requests.get(CSVReader._hatvp_list)
-        return self._parser(io.StringIO(r.text))
+        return self._parser(io.StringIO(r.text[3:]))
 
     def _open(self, filename):
-        with open(filename, 'r') as file_handle:
+        with open(filename, 'r', encoding='utf-8-sig') as file_handle:
             return self._parser(file_handle)
 
     def _parser(self, file_handle):
