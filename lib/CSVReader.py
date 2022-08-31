@@ -8,7 +8,7 @@ from .ResponsablesPublics import ResponsablesPublics
 from .Report import Report
 
 class CSVReader:
-    _hatvp_list = 'http://www.hatvp.fr/files/open-data/liste.csv'
+    _hatvp_list = 'https://www.hatvp.fr/livraison/opendata/liste.csv'
 
     def __init__(self, args):
         self._args = args
@@ -23,7 +23,7 @@ class CSVReader:
 
     def _fetch(self):
         r = requests.get(CSVReader._hatvp_list)
-        return self._parser(io.StringIO(r.text[3:]))
+        return self._parser(io.StringIO(r.text))
 
     def _open(self, filename):
         with open(filename, 'r', encoding='utf-8-sig') as file_handle:

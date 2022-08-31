@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 class ResponsablePublic:
-    _hatvp_root = 'http://hatvp.fr/'
-    _file_address = _hatvp_root + 'files/declarations/'
+    _hatvp_root = 'https://www.hatvp.fr/'
+    _file_address = _hatvp_root + 'livraison/dossiers/'
 
     def __init__(self, resps, raw):
         self._resps = resps
